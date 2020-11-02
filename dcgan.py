@@ -27,7 +27,7 @@ transform = transforms.Compose([transforms.Resize(imageSize), transforms.ToTenso
 
 #dataset = dset.DatasetFolder(root='./data/L', loader='default_loader',extensions=ext, transform=transform)
 
-dataset = dset.ImageFolder(root='./data2', transform=transform)
+dataset = dset.ImageFolder(root='./data', transform=transform)
 
 dataloader = torch.utils.data.DataLoader(dataset, batch_size = batchSize, shuffle = True, num_workers = 2) # We use dataLoader to get the images of the training set batch by batch.
 
