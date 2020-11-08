@@ -17,6 +17,7 @@ from six.moves import xrange
 from PIL import Image
 
 import tensorflow as tf
+import tensorflow_addons as tfa
 import tensorflow.contrib.slim as slim
 
 pp = pprint.PrettyPrinter()
