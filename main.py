@@ -75,7 +75,7 @@ def main(_):
   run_config = tf.compat.v1.ConfigProto()
   run_config.gpu_options.allow_growth=True
 
-  with tf.Session(config=run_config) as sess:
+  with tf.compat.v1.Session(config=run_config) as sess:
     if FLAGS.dataset == 'mnist':
       dcgan = DCGAN(
           sess,
