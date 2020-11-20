@@ -7,7 +7,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 """
-
+from PIL.Image import open as ImOpen,fromarray,BILINEAR
 import cv2
 import sys
 import os
@@ -54,9 +54,10 @@ else:
 
     # set global threshold value to eliminate grey values (binary)
     th0 = cv2.adaptiveThreshold(cl1, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+    ret,tsh2 = cv2.threshold(th0,127,255,cv2.THRESH_BINARY_INV)
 
     # median to reduce noise
-    median = cv2.medianBlur(th0, 3)
+    median = cv2.medianBlur(tsh2, 3)
     # blur to smooth edges
     blur = cv2.GaussianBlur(median, (3, 3), 0)
 
