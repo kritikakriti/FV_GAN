@@ -11,7 +11,8 @@ for file in filenames:
 
 num = 0
 for image in images:
-    cv2.imwrite("output/", (str(num)+".png", image))
+    img = (str(num)+".png", image)
+    cv2.imwrite("output/", img)
     num += 1
   
   
