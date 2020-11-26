@@ -11,8 +11,9 @@ for file in filenames:
 
 num = 0
 for image in images:
-    img = (str(num)+".png", image)
-    cv2.imwrite("output/", img)
+    img_name = str(num)+".png"
+    out_path = "output/"
+    cv2.imwrite(os.path.join(out_path, g) for g in os.listdir(path_r) if g.endswith(".bmp"), img_name)
     num += 1
   
   
