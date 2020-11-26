@@ -2,12 +2,14 @@ import cv2
 import os
 
 def loadImages(path = "input/"):
-    temp = os.listdir(path)
-    print(temp)
+    return [os.path.join(path, f) for f in os.listdir(path) if f.endswith(".bmp")]
 
 
 
-loadImages()
+filenames = loadImages()
+images = []
+for file in filenames:
+    images.append(cv2.imread(file, cv2.IMREAD_GRAYSCALE))
 #cv2.imread()  
   
   
