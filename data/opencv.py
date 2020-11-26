@@ -1,7 +1,7 @@
 import cv2
 import os
 
-def loadImages(path = "/input"):
+def loadImages(path = "input/"):
     temp = os.listdir(path)
     print(temp)
 
