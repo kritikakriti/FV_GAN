@@ -2,7 +2,7 @@ import cv2
 import os
 
 def loadImages(path_r = "input/"):
-    return [os.path.join(path_r, f) for f in os.listdir(path_r) if f.endswith(".bmp")]
+    return [os.path.join(path_r, f) for f in os.listdir(path_r) if f.endswith(".jpg")]
 
 filenames = loadImages()
 images = []
@@ -36,7 +36,7 @@ for image in images:
     
     #output image in output folder
     path = "output/"
-    cv2.imwrite(os.path.join(path, str(num)+".bmp"), blur)
+    cv2.imwrite(os.path.join(path, str(num)+".jpg"), blur)
     num += 1
   
   
