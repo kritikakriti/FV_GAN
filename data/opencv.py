@@ -7,7 +7,11 @@ def loadImages(path_r = "input/"):
 filenames = loadImages()
 images = []
 for file in filenames:
-    input_image = cv2.imread(file, cv2.IMREAD_GRAYSCALE))
+    images.append(cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+
+                  
+print(images)                  
+    '''input_image = cv2.imread(file, cv2.IMREAD_GRAYSCALE))
     img = cv2.flip(input_image, 1)
     # blur image to reduce noise
     img_blur = cv2.medianBlur(img, 5)
@@ -25,7 +29,7 @@ for file in filenames:
     # median to reduce noise
     median = cv2.medianBlur(tsh2, 3)
     # blur to smooth edges
-    blur = cv2.GaussianBlur(median, (3, 3), 0)
+    blur = cv2.GaussianBlur(median, (3, 3), 0)'''
 
 num = 0
 for image in images:
